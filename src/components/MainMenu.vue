@@ -22,6 +22,7 @@
         <router-link class="menu-item" :to="{ name: 'tournament-players', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false">Players</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-categories', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false">Categories</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-tatamis', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false"> Tatamis</router-link>
+        <a class="menu-item" href="#0" target="_blank">Schedule</a>
       </template>
   </nav>
 </template>
