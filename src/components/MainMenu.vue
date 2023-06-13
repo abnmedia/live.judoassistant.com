@@ -8,6 +8,8 @@
         <router-link class="menu-item" :to="{ name: 'tournament-players', params: { tournament: this.$route.params.tournament }}">Players</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-categories', params: { tournament: this.$route.params.tournament }}">Categories</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-tatamis', params: { tournament: this.$route.params.tournament }}">Tatamis</router-link>
+        <a class="menu-item" href="https://live.judoinfo.dk/fbt2023" target="_blank">Tatamis</a>
+
 
         <a class="menu-item" id="curtain-button" href="#" @click.prevent="showNavCurtain = true"><span class="mdi mdi-menu"></span></a>
       </template>
