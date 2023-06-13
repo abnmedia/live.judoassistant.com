@@ -8,7 +8,7 @@
         <router-link class="menu-item" :to="{ name: 'tournament-players', params: { tournament: this.$route.params.tournament }}">Players</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-categories', params: { tournament: this.$route.params.tournament }}">Categories</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-tatamis', params: { tournament: this.$route.params.tournament }}">Tatamis</router-link>
-        <a class="menu-item" href="https://www.judoinfo.dk/fbt/schedule.html" target="_blank">Schedule</a>
+        <a class="menu-item" href="https://www.judoinfo.dk/fbt/schedule.html">Schedule</a>
 
 
         <a class="menu-item" id="curtain-button" href="#" @click.prevent="showNavCurtain = true"><span class="mdi mdi-menu"></span></a>
@@ -22,7 +22,7 @@
         <router-link class="menu-item" :to="{ name: 'tournament-players', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false">Players</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-categories', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false">Categories</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-tatamis', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false"> Tatamis</router-link>
-        <a class="menu-item" href="https://www.judoinfo.dk/fbt/schedule.html" target="_blank">Schedule</a>
+        <a class="menu-item" href="https://www.judoinfo.dk/fbt/schedule.html">Schedule</a>
       </template>
   </nav>
 </template>
