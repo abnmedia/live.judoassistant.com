@@ -19,15 +19,11 @@
 
 <script>
 /* <TabItem :label="'Tatami ' + (index + 1)" :key="index" v-for="(matches, index) of tatamiMatches"> */
-import Tabs from '@/components/Tabs.vue'
-import TabItem from '@/components/TabItem.vue'
-import InfoText from '@/components/InfoText.vue'
 import { mapId } from '@/store/helpers.js'
 import { dateFilter } from '@/store/filters.js'
 import { mapState, mapGetters } from 'vuex'
 
 export default {
-  components: { Tabs, TabItem, InfoText, },
   mounted: function() {
     /* this.$store.dispatch('subscribeTournament', this.$route.params.tournament); */
   },
