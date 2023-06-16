@@ -11,7 +11,7 @@
 
 <script>
 /* <TabItem :label="'Tatami ' + (index + 1)" :key="index" v-for="(matches, index) of tatamiMatches"> */
-import { mapState, mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 import InfoText from '@/components/InfoText.vue'
 
 export default {
