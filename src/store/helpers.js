@@ -86,17 +86,3 @@ export function playerMatchesComparator(a, b) {
   return a.position - b.position;
 }
 
-/*
- * Compare numbers but order null values at the end
- */
-export function resultsComparator(a, b) {
-  if (a == null && b == null)
-    return 0;
-  if (a == null)
-    return 1;
-  if (b == null)
-    return -1;
-
-  return a - b;
-}
-

@@ -18,24 +18,8 @@
           </TableColumn>
         </Table>
       </TabItem>
+
       
-      <TabItem title="Results">
-        <InfoText v-if="results.length == 0">This category has no results yet.</InfoText>
-        <Table v-if="results.length > 0" :headers="resultsTableHeaders" :rows="results" v-slot="props">
-          <TableColumn>
-            <router-link class="menu-item" :to="{ name: 'tournament-player', params: { tournament: this.$route.params.tournament, playerId: props.row.id }}">{{ props.row.firstName }}</router-link>
-          </TableColumn>
-          <TableColumn>
-            {{ props.row.lastName }}
-          </TableColumn>
-          <TableColumn>
-            {{ props.row.club }}
-          </TableColumn>
-          <TableColumn>
-            {{ props.row.pos }}
-          </TableColumn>
-        </Table>
-      </TabItem>
     </Tabs>
   </template>
 </template>
@@ -48,7 +32,6 @@ import TabItem from '@/components/TabItem.vue'
 import Table from '@/components/Table.vue'
 import TableColumn from '@/components/TableColumn.vue'
 import InfoText from '@/components/InfoText.vue'
-import { mapId, resultsComparator } from '@/store/helpers.js'
 
 export default {
   components: { Tabs, TabItem, Table, TableColumn, InfoText },
@@ -58,12 +41,6 @@ export default {
         { 'field': 'firstName', 'label': 'First Name', 'sortable': true },
         { 'field': 'lastName', 'label': 'Last Name', 'sortable': true },
         { 'field': 'club', 'label': 'Club', 'sortable': true },
-      ],
-      resultsTableHeaders: [
-        { 'field': 'firstName', 'label': 'First Name', 'sortable': false },
-        { 'field': 'lastName', 'label': 'Last Name', 'sortable': false },
-        { 'field': 'club', 'label': 'Club', 'sortable': false },
-        { 'field': 'pos', 'label': 'Position', 'sortable': true, 'comparator': resultsComparator },
       ],
     }
   },
@@ -82,7 +59,6 @@ export default {
     }),
     ...mapGetters({
       players: 'categoryPlayers',
-      results: 'categoryResults',
     }),
   },
   methods: {

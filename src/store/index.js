@@ -396,18 +396,6 @@ export default createStore({
 
       return players;
     },
-    categoryResults(state) {
-      var results = [];
-
-      if (state.category != null && state.category.results != null) {
-        for (const row of state.category.results) {
-          const player = state.players.get(row.player);
-          results.push({ ... player, pos: row.pos });
-        }
-      }
-
-      return results;
-    },
     getPlayer: (state) => (id) => {
       return state.players.get(id);
     },
