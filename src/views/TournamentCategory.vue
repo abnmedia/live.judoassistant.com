@@ -18,6 +18,7 @@
           </TableColumn>
         </Table>
       </TabItem>
+      
       <TabItem title="Results">
         <InfoText v-if="results.length == 0">This category has no results yet.</InfoText>
         <Table v-if="results.length > 0" :headers="resultsTableHeaders" :rows="results" v-slot="props">
@@ -80,7 +81,6 @@ export default {
       category: state => state.category,
     }),
     ...mapGetters({
-      matches: 'categoryMatches',
       players: 'categoryPlayers',
       results: 'categoryResults',
     }),

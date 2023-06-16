@@ -33,6 +33,7 @@
           </tr>
         </table>
       </TabItem>
+      
     </Tabs>
   </template>
 </template>
@@ -67,7 +68,6 @@ export default {
       player: state => state.player,
     }),
     ...mapGetters({
-      matches: 'playerMatches',
       categories: 'playerCategories',
     }),
   },
