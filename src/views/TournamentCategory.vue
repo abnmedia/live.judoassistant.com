@@ -61,9 +61,6 @@ export default {
       players: 'categoryPlayers',
     }),
   },
-  methods: {
-    mapId: mapId,
-  },
 }
 </script>
 
