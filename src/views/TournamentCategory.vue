@@ -46,12 +46,11 @@ import Tabs from '@/components/Tabs.vue'
 import TabItem from '@/components/TabItem.vue'
 import Table from '@/components/Table.vue'
 import TableColumn from '@/components/TableColumn.vue'
-import MatchCard from '@/components/MatchCard.vue'
 import InfoText from '@/components/InfoText.vue'
 import { mapId, resultsComparator } from '@/store/helpers.js'
 
 export default {
-  components: { Tabs, TabItem, MatchCard, Table, TableColumn, InfoText },
+  components: { Tabs, TabItem, Table, TableColumn, InfoText },
   data() {
     return {
       playerTableHeaders: [

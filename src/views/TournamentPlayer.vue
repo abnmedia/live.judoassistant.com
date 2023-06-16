@@ -40,14 +40,13 @@
 <script>
 import Tabs from '@/components/Tabs.vue'
 import TabItem from '@/components/TabItem.vue'
-import MatchCard from '@/components/MatchCard.vue'
 import InfoText from '@/components/InfoText.vue'
 import { mapState, mapGetters } from 'vuex'
 import { sexFilter, rankFilter, countryFilter } from '@/store/filters.js'
 import { mapId } from '@/store/helpers.js'
 
 export default {
-  components: { Tabs, TabItem, MatchCard, InfoText },
+  components: { Tabs, TabItem, InfoText },
   mounted: function() {
     this.$store.dispatch('subscribePlayer', this.$route.params.playerId);
   },
