@@ -29,9 +29,6 @@ export default {
       tournamentState: state => state.tournamentState,
       tournament: state => state.tournament,
     }),
-    ...mapGetters({
-      tatamiMatches: 'tatamiMatches',
-    }),
   },
 }
 </script>

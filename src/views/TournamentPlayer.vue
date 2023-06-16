@@ -33,10 +33,6 @@
           </tr>
         </table>
       </TabItem>
-      <TabItem title="Matches">
-        <InfoText v-if="matches.length == 0">This player has no matches yet.</InfoText>
-        <MatchCard v-for="match in matches" :key="mapId(match.combinedId)" :match="match" ></MatchCard>
-      </TabItem>
     </Tabs>
   </template>
 </template>
