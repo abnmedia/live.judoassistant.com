@@ -21,7 +21,7 @@
 /* <TabItem :label="'Tatami ' + (index + 1)" :key="index" v-for="(matches, index) of tatamiMatches"> */
 import { mapId } from '@/store/helpers.js'
 import { dateFilter } from '@/store/filters.js'
-import { mapState, mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   mounted: function() {
