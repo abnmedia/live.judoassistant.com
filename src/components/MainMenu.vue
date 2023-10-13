@@ -53,7 +53,7 @@ export default {
 
   /* styling of nav-bar */
   #nav-bar {
-    background: $color5;
+    background: $color7;
   }
 
   #nav-bar > div {
