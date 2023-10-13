@@ -91,7 +91,7 @@ export default {
 
   #nav-bar a.menu-item:hover, #nav-bar a#logo:hover, #nav-bar .router-link-exact-active {
     text-decoration: none;
-    background: darken($color6, 6);
+    background: darken($color3);
   }
 
   #nav-bar #curtain-button {
