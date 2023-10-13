@@ -8,8 +8,6 @@
         <router-link class="menu-item" :to="{ name: 'tournament-players', params: { tournament: this.$route.params.tournament }}">Players</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-categories', params: { tournament: this.$route.params.tournament }}">Categories</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-tatamis', params: { tournament: this.$route.params.tournament }}">Tatamis</router-link>
-        <a class="menu-item" href="https://www.judoinfo.dk/fbt/fbt-2023-schedule.pdf" target="_blank">Schedule</a>
-
 
         <a class="menu-item" id="curtain-button" href="#" @click.prevent="showNavCurtain = true"><span class="mdi mdi-menu"></span></a>
       </template>
@@ -22,7 +20,6 @@
         <router-link class="menu-item" :to="{ name: 'tournament-players', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false">Players</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-categories', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false">Categories</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-tatamis', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false"> Tatamis</router-link>
-        <a class="menu-item" href="https://www.judoinfo.dk/fbt/fbt-2023-schedule.pdf" target="_blank">Schedule</a>
       </template>
   </nav>
 </template>
@@ -94,7 +91,7 @@ export default {
 
   #nav-bar a.menu-item:hover, #nav-bar a#logo:hover, #nav-bar .router-link-exact-active {
     text-decoration: none;
-    background: darken($color5, 6);
+    background: darken($color6, 6);
   }
 
   #nav-bar #curtain-button {

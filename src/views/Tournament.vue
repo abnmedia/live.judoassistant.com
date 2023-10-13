@@ -11,7 +11,7 @@
 
 <script>
 /* <TabItem :label="'Tatami ' + (index + 1)" :key="index" v-for="(matches, index) of tatamiMatches"> */
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import InfoText from '@/components/InfoText.vue'
 
 export default {
@@ -28,6 +28,9 @@ export default {
     ...mapState({
       tournamentState: state => state.tournamentState,
       tournament: state => state.tournament,
+    }),
+    ...mapGetters({
+      tatamiMatches: 'tatamiMatches',
     }),
   },
 }

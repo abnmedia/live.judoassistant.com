@@ -18,8 +18,33 @@
           </TableColumn>
         </Table>
       </TabItem>
+      <TabItem title="Matches">
+        <template v-if="category.matchesHidden">
+          <InfoText>The matches in this category are hidden.</InfoText>
+        </template>
+        <template v-else>
+          <InfoText v-if="matches.length == 0">This category has no matches yet.</InfoText>
 
-      
+          <MatchCard v-for="match in matches" :key="mapId(match.combinedId)" :match="match"></MatchCard>
+        </template>
+      </TabItem>
+      <TabItem title="Results">
+        <InfoText v-if="results.length == 0">This category has no results yet.</InfoText>
+        <Table v-if="results.length > 0" :headers="resultsTableHeaders" :rows="results" v-slot="props">
+          <TableColumn>
+            <router-link class="menu-item" :to="{ name: 'tournament-player', params: { tournament: this.$route.params.tournament, playerId: props.row.id }}">{{ props.row.firstName }}</router-link>
+          </TableColumn>
+          <TableColumn>
+            {{ props.row.lastName }}
+          </TableColumn>
+          <TableColumn>
+            {{ props.row.club }}
+          </TableColumn>
+          <TableColumn>
+            {{ props.row.pos }}
+          </TableColumn>
+        </Table>
+      </TabItem>
     </Tabs>
   </template>
 </template>
@@ -31,16 +56,24 @@ import Tabs from '@/components/Tabs.vue'
 import TabItem from '@/components/TabItem.vue'
 import Table from '@/components/Table.vue'
 import TableColumn from '@/components/TableColumn.vue'
+import MatchCard from '@/components/MatchCard.vue'
 import InfoText from '@/components/InfoText.vue'
+import { mapId, resultsComparator } from '@/store/helpers.js'
 
 export default {
-  components: { Tabs, TabItem, Table, TableColumn, InfoText },
+  components: { Tabs, TabItem, MatchCard, Table, TableColumn, InfoText },
   data() {
     return {
       playerTableHeaders: [
         { 'field': 'firstName', 'label': 'First Name', 'sortable': true },
         { 'field': 'lastName', 'label': 'Last Name', 'sortable': true },
         { 'field': 'club', 'label': 'Club', 'sortable': true },
+      ],
+      resultsTableHeaders: [
+        { 'field': 'firstName', 'label': 'First Name', 'sortable': false },
+        { 'field': 'lastName', 'label': 'Last Name', 'sortable': false },
+        { 'field': 'club', 'label': 'Club', 'sortable': false },
+        { 'field': 'pos', 'label': 'Position', 'sortable': true, 'comparator': resultsComparator },
       ],
     }
   },
@@ -58,8 +91,13 @@ export default {
       category: state => state.category,
     }),
     ...mapGetters({
+      matches: 'categoryMatches',
       players: 'categoryPlayers',
+      results: 'categoryResults',
     }),
+  },
+  methods: {
+    mapId: mapId,
   },
 }
 </script>
