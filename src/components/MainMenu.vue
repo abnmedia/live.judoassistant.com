@@ -135,7 +135,7 @@ export default {
 
   #nav-curtain .router-link-exact-active, #nav-curtain a.menu-item:hover {
     text-decoration: none;
-    background: #eceff4;
+    background: #636b78;
     color: $color5;
   }
 
