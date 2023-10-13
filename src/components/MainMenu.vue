@@ -101,7 +101,7 @@ export default {
 
   /* Styling of curtain nav */
   #nav-curtain {
-    background: white;
+    background: $color7;
     position: fixed;
     left: 0;
     top: 0;
@@ -135,8 +135,8 @@ export default {
 
   #nav-curtain .router-link-exact-active, #nav-curtain a.menu-item:hover {
     text-decoration: none;
-    background: #636b78;
-    color: $color5;
+    background: $color3;
+    color: $color1;
   }
 
   /* Media queries (tablets and down) */
