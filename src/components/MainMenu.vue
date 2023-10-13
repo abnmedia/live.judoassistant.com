@@ -64,13 +64,13 @@ export default {
   }
 
   #nav-bar a#logo {
-    height: 60px;
+    height: 45px;
     transition: 0.2s;
   }
 
   #nav-bar a#logo img {
     height: 35px;
-    margin: 20px 16px;
+    margin: 10px 16px;
   }
 
   #nav-bar .filler {
