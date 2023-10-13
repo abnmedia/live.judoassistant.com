@@ -64,7 +64,7 @@ export default {
   }
 
   #nav-bar a#logo {
-    height: 45px;
+    height: 60px;
     transition: 0.2s;
   }
 
