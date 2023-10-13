@@ -69,8 +69,8 @@ export default {
   }
 
   #nav-bar a#logo img {
-    height: 35px;
-    margin: 10px 16px;
+    height: 28px;
+    margin: 15px 16px;
   }
 
   #nav-bar .filler {
