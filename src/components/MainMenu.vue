@@ -8,7 +8,8 @@
         <router-link class="menu-item" :to="{ name: 'tournament-players', params: { tournament: this.$route.params.tournament }}">Players</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-categories', params: { tournament: this.$route.params.tournament }}">Categories</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-tatamis', params: { tournament: this.$route.params.tournament }}">Tatamis</router-link>
-
+        <a class="menu-item" href="https://www.judoinfo.dk/jjc-2023_4" target="_blank">Tidsplan</a>
+        <a class="menu-item" href="https://www.judoinfo.dk/livestreaming" target="_blank">Livestreaming</a>
         <a class="menu-item" id="curtain-button" href="#" @click.prevent="showNavCurtain = true"><span class="mdi mdi-menu"></span></a>
       </template>
     </div>
@@ -20,6 +21,8 @@
         <router-link class="menu-item" :to="{ name: 'tournament-players', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false">Players</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-categories', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false">Categories</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-tatamis', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false"> Tatamis</router-link>
+        <a class="menu-item" href="https://www.judoinfo.dk/jjc-2023_4" target="_blank">Tidsplan</a>
+        <a class="menu-item" href="https://www.judoinfo.dk/livestreaming" target="_blank">Livestreaming</a>
       </template>
   </nav>
 </template>
