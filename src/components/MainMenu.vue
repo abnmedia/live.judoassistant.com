@@ -1,8 +1,7 @@
 <template>
   <nav id="nav-bar">
     <div>
-      <router-link id="logo" :to="{ name: 'home' }"><img src="https://www.judoinfo.dk/assets/images/logo/logo.png" alt="logo" /></router-link>
-      <div class="filler"></div>
+      <router-link id="logo" :to="{ name: 'home' }"><img src="@/assets/images/judoinfo-logo.png" alt="logo" /></router-link>      <div class="filler"></div>
       <template v-if="this.$route.params.tournament != null">
         <router-link class="menu-item" :to="{ name: 'tournament-home', params: { tournament: this.$route.params.tournament }}">Overview</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-players', params: { tournament: this.$route.params.tournament }}">Players</router-link>
