@@ -56,7 +56,7 @@ export default {
 
   /* styling of nav-bar */
   #nav-bar {
-    background: $color7;
+    background: $color6;
   }
 
   #nav-bar > div {
@@ -104,7 +104,7 @@ export default {
 
   /* Styling of curtain nav */
   #nav-curtain {
-    background: $color7;
+    background: $color6;
     position: fixed;
     left: 0;
     top: 0;
