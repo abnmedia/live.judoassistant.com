@@ -56,7 +56,7 @@ export default {
 
   /* styling of nav-bar */
   #nav-bar {
-    background: $color6;
+    background: $color5;
   }
 
   #nav-bar > div {
@@ -72,8 +72,8 @@ export default {
   }
 
   #nav-bar a#logo img {
-    height: 28px;
-    margin: 15px 16px;
+    height: 40px;
+    margin: 10px 16px;
   }
 
   #nav-bar .filler {
@@ -94,7 +94,7 @@ export default {
 
   #nav-bar a.menu-item:hover, #nav-bar a#logo:hover, #nav-bar .router-link-exact-active {
     text-decoration: none;
-    background: $color3;
+    background: darken($color5, 6);
   }
 
   #nav-bar #curtain-button {
@@ -104,7 +104,7 @@ export default {
 
   /* Styling of curtain nav */
   #nav-curtain {
-    background: $color6;
+    background: white;
     position: fixed;
     left: 0;
     top: 0;
@@ -138,8 +138,8 @@ export default {
 
   #nav-curtain .router-link-exact-active, #nav-curtain a.menu-item:hover {
     text-decoration: none;
-    background: $color3;
-    color: $color1;
+    background: #eceff4;
+    color: $color5;
   }
 
   /* Media queries (tablets and down) */
@@ -153,4 +153,3 @@ export default {
     }
   }
 </style>
-
