@@ -9,7 +9,7 @@
         <router-link class="menu-item" :to="{ name: 'tournament-categories', params: { tournament: this.$route.params.tournament }}">Categories</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-tatamis', params: { tournament: this.$route.params.tournament }}">Tatamis</router-link>
         <a class="menu-item" href="https://www.judoinfo.dk/fbt/fbt-2024-schedule.pdf" target="_blank">Schedule</a>
-        <a style="margin-top: 10px;border-top: 1px solid #464d5a;" class="menu-item" href="https://www.judoinfo.dk/fbt/">F.B.T. Landingpage</a>
+        <a style="border-left: 1px solid #bac6d4;" class="menu-item" href="https://www.judoinfo.dk/fbt/">F.B.T. Landingpage</a>
 
 
         <a class="menu-item" id="curtain-button" href="#" @click.prevent="showNavCurtain = true"><span class="mdi mdi-menu"></span></a>

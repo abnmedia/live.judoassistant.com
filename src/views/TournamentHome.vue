@@ -1,8 +1,9 @@
 <template>
-  <h2>Overview</h2>
+  <p><b>How to navigate the site:</b></p>
   <p>To find which group/category you're in, navigate to the "Players" page in the menu and find your name.</p>
   <p>To find which Tatami your group/category is on, navigate to the "Tatamis" page in the menu.</p>
   <p>To find the exact* timeschedule for the matches navigate to the "Schedule" link in the menu.</p>
+  <h2>Overview</h2>
   <table>
     <tr>
       <th>Tournament</th>
