@@ -1,13 +1,17 @@
 <template>
   <nav id="nav-bar">
     <div>
-      <router-link id="logo" :to="{ name: 'home' }"><img src="@/assets/images/judoinfo-logo.png" alt="logo" /></router-link>      <div class="filler"></div>
+      <router-link id="logo" :to="{ name: 'home' }"><img src="@/assets/images/judoinfo-logo.png" alt="logo" /></router-link>
+      <div class="filler"></div>
       <template v-if="this.$route.params.tournament != null">
         <router-link class="menu-item" :to="{ name: 'tournament-home', params: { tournament: this.$route.params.tournament }}">Overview</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-players', params: { tournament: this.$route.params.tournament }}">Players</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-categories', params: { tournament: this.$route.params.tournament }}">Categories</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-tatamis', params: { tournament: this.$route.params.tournament }}">Tatamis</router-link>
-        <a class="menu-item" href="https://www.judoinfo.dk/jjc-2023_4" target="_blank">Tidsplan</a>
+        <a class="menu-item" href="https://www.judoinfo.dk/fbt/fbt-2024-schedule.pdf" target="_blank">Schedule</a>
+        <a style="margin-top: 10px;border-top: 1px solid #464d5a;" class="menu-item" href="https://www.judoinfo.dk/fbt/">F.B.T. Landingpage</a>
+
+
         <a class="menu-item" id="curtain-button" href="#" @click.prevent="showNavCurtain = true"><span class="mdi mdi-menu"></span></a>
       </template>
     </div>
@@ -19,7 +23,9 @@
         <router-link class="menu-item" :to="{ name: 'tournament-players', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false">Players</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-categories', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false">Categories</router-link>
         <router-link class="menu-item" :to="{ name: 'tournament-tatamis', params: { tournament: this.$route.params.tournament }}" @click="showNavCurtain = false"> Tatamis</router-link>
-        <a class="menu-item" href="https://www.judoinfo.dk/jjc-2023_4" target="_blank">Tidsplan</a>
+        <a class="menu-item" href="https://www.judoinfo.dk/fbt/fbt-2024-schedule.pdf" target="_blank">Schedule</a>
+        <a style="margin-top: 10px;border-top: 1px solid #464d5a;" class="menu-item" href="https://www.judoinfo.dk/fbt/">F.B.T. Landingpage</a>
+
       </template>
   </nav>
 </template>
@@ -150,3 +156,4 @@ export default {
     }
   }
 </style>
+

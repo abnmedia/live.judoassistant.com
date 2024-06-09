@@ -33,10 +33,7 @@
           </tr>
         </table>
       </TabItem>
-      <TabItem title="Matches">
-        <InfoText v-if="matches.length == 0">This player has no matches yet.</InfoText>
-        <MatchCard v-for="match in matches" :key="mapId(match.combinedId)" :match="match" ></MatchCard>
-      </TabItem>
+      
     </Tabs>
   </template>
 </template>
@@ -44,14 +41,13 @@
 <script>
 import Tabs from '@/components/Tabs.vue'
 import TabItem from '@/components/TabItem.vue'
-import MatchCard from '@/components/MatchCard.vue'
 import InfoText from '@/components/InfoText.vue'
 import { mapState, mapGetters } from 'vuex'
 import { sexFilter, rankFilter, countryFilter } from '@/store/filters.js'
 import { mapId } from '@/store/helpers.js'
 
 export default {
-  components: { Tabs, TabItem, MatchCard, InfoText },
+  components: { Tabs, TabItem, InfoText },
   mounted: function() {
     this.$store.dispatch('subscribePlayer', this.$route.params.playerId);
   },
@@ -72,7 +68,6 @@ export default {
       player: state => state.player,
     }),
     ...mapGetters({
-      matches: 'playerMatches',
       categories: 'playerCategories',
     }),
   },
